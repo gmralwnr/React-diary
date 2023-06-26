@@ -2,7 +2,6 @@
 
 import Myheader from './MyHeader';
 import Myfooter from './Myfooter';
-import Counter from './Counter';
 
 function App() { //id 가 root안에  디렉토리로 들어갔다
   
@@ -27,9 +26,8 @@ function App() { //id 가 root안에  디렉토리로 들어갔다
   };
 
   return (
-    <div className="App">
+    <div style={style.App} className="App">
       <Myheader/>
-      <Counter/>
       <header className="App-header">
          <h2 style={style.h2}> 안녕 리액트 {name} {1-5} {func()}</h2>  
          <b style={style.bold_text} id='bold_text' >React.js 
