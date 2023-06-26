@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 
-function App() {
+import Myheader from './MyHeader';
+import Myfooter from './Myfooter';
+
+function App() { //id 가 root안에  디렉토리로 들어갔다
+  
+  const style={
+    App:{
+      backgroundColor : "black",
+    },
+    h2:{
+      color:"red",
+    },
+
+    bold_text :{
+      color:"green",
+    },
+  }
+  let name ="하하" //변수 생성
+  const number =5;
+
+  //함수 생성 -> 함수 호출 func()
+  const func =()=>{
+    return "fnuc";
+  };
+
   return (
-    <div className="App">
+    <div style={style.App} className="App">
+      <Myheader/>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+         <h2 style={style.h2}> 안녕 리액트 {name} {1-5} {func()}</h2>  
+         <b style={style.bold_text} id='bold_text' >React.js 
+         <br/> {number} 는  {number %2==0 ? "짝수" :"홀수" }</b>
       </header>
+      <Myfooter/>
     </div>
   );
 }
 
-export default App;
+export default App;  //index.js 에서 import 할 수 있도록 함 
